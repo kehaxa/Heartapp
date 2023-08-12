@@ -1,0 +1,12 @@
+{% extends "pokoje/base.html" %}
+
+{% block title %}Stwórz konto{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content%}
+	<form method="POST" class="form-group">
+		{% csrf_token %}
+		{{ form|crispy }}
+		<button type="submit" class="btn btn-succes">Stwórz użytkownika</button>
+		</form>
+{% endblock %}
